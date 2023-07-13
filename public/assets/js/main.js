@@ -339,3 +339,15 @@ $("#contact-form").submit(function(e) {
   
 });
 
+var input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+    initialCountry: "auto",
+    hiddenInput: "full",
+    geoIpLookup: function(callback) {
+      fetch("https://ipapi.co/json")
+        .then(function(res) { return res.json(); })
+        .then(function(data) { callback(data.country_code); })
+        .catch(function() { callback("us"); });
+    },
+  });

@@ -11,8 +11,8 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {});
 app.post("/contact_us", (req, res) => {
-  // console.log(req);
-
+  // console.log(req.body);
+  
   const transporter = nodemailer.createTransport({
     // to send the mail
     service: "gmail",
@@ -22,13 +22,14 @@ app.post("/contact_us", (req, res) => {
     },
   });
 
-  const { name , email, phone, subject, message } = req.body;
+  const { name , email, full,phone, subject, message } = req.body;
   
   const emailBody = `
 A contact form was recently submitted on StreamTech website. Below are the details of the inquiry
 
 Name: ${name}
 Email: ${email}
+Phone Number full: ${full}
 Phone Number: ${phone}
 Subject: ${subject}
 Message: ${message}
@@ -54,6 +55,6 @@ Message: ${message}
   });
 });
 
-app.listen(3000, () => {
+app.listen(4000, () => {
   console.log("server is started");
 });

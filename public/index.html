@@ -19,7 +19,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/streamtech.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -33,7 +33,8 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+
 
   <!-- Variables CSS Files. Uncomment your preferred color scheme -->
   <!-- <link href="assets/css/variables.css" rel="stylesheet"> -->
@@ -610,7 +611,7 @@ Your first name, Email Address and Phone Number(Optional). We do not store any p
 
           </div>
 
-          <div class="col-lg-8" id="contact_us">
+          <div class="col-lg-8 contact" id="contact_us" >
             <form  action="/contact_us" method="POST" id="contact-form"  class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
@@ -623,13 +624,13 @@ Your first name, Email Address and Phone Number(Optional). We do not store any p
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
-              <div class="form-group mt-3">
-                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter Your Phone Number" required>
+              <div class="form-group mt-3 row ">
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number without country code" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+                <textarea class="form-control ps-5" name="message" placeholder="Message" required></textarea>
               </div>
-              <div class="text-center"><button class="btn btn-primary">Send Message</button></div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
               <div class="mt-4 form-response">
                 
               </div>
@@ -699,7 +700,7 @@ Your first name, Email Address and Phone Number(Optional). We do not store any p
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
   
 
   <!-- Template Main JS File -->
